@@ -1,11 +1,13 @@
 import { cn } from '../utils/cn';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   scrollY: number;
 }
 
 export function Navbar({ scrollY }: NavbarProps) {
+  const navigator = useNavigate();
   return (
     <motion.nav
       initial={{ filter: 'blur(10px)' }}
@@ -21,7 +23,7 @@ export function Navbar({ scrollY }: NavbarProps) {
       <div className="w-full flex items-center justify-between md:px-8 px-3 left-0 right-0">
         <div className="flex items-center space-x-2">
           <div
-            onClick={() => (window.location.href = '/')}
+            onClick={() => navigator('/')}
             className="flex items-center space-x-1 cursor-pointer"
           >
             <div className="relative w-10 h-10 flex items-center justify-center">

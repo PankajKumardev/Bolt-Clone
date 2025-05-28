@@ -347,7 +347,7 @@ export function Builder() {
       <header className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center">
             <button
-            onClick={() => navigate('/')}
+            onClick={() => window.location.href = '/'}
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
             <img 
